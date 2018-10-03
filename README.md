@@ -1,9 +1,23 @@
 # automated_sequencing
-pipeline for analyzing in-situ seq data
+### pipeline for analyzing in-situ sequencing data
 
-This was built on Mac OS X. It will hopefully work on linux with minor modifications. It won't work on Windows in its current state.
+This project is intended to provide a full pipeline for analyzing in situ sequencing data, including different options depending on the imaging resolution (cellular or subcellular).
 
-installation instructions:
+Authors: C. J. Stoneking, A. Vaughan
+
+The main steps of the pipeline are:
+
+1. stitch image tiles (via ImageJ)
+2. take z projections
+3. perform rigid registration
+4. background subtraction
+5. segmentation
+6. base-call
+
+
+We are planning to incorporate options for non-rigid registration via elastix. 
+
+installation instructions for the version with elastix:
 
 1. download the files to a convenient working directory e.g. Users/yourname/automated_sequencing
 2. download elastix binaries from http://elastix.isi.uu.nl/download_links.php. Put the elastix folder in the working directory, i.e. you should have something like Users/yourname/automated_sequencing/elastix_macosx64_v4/bin/elastix
